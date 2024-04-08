@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon/components';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Instruktur',
+};
+
+const instruktur = [
+  {
+    no: 1,
+    nama: 'Nurfadilah, SM',
+    pelatihan: 'Optimalisasi Media Sosial untuk Meningkatkan Penjualan Produk',
+    linkedin: 'https://www.linkedin.com/in/nurfadilah96/',
+  },
+  {
+    no: 2,
+    nama: 'Sappewali, S.Pd.,M.Si',
+    pelatihan: 'Analisis Kualitas Air dan Teknik Penyaringan Air ',
+    linkedin: 'https://www.linkedin.com/in/sappewali-sappewali-5b95352ab/ ',
+  },
+  {
+    no: 3,
+    nama: 'Sri Maulana ST . CPT',
+    pelatihan: 'Teknik Pemasaran Produk Menggunakan Optimalisasi Media Sosial',
+    linkedin: 'http://www.linkedin.com/in/sri-maulana-bustam-st-cpt-b82a4728a ',
+  },
+  {
+    no: 4,
+    nama: 'Muhammad Aslam STP',
+    pelatihan: 'Optimalaisasi  Whatsapp Bisnis Bagi Spesialis Pemasaran Digital ',
+    linkedin: 'https://www.linkedin.com/in/muhammad-aslam-579722262/ ',
+  },
+  {
+    no: 5,
+    nama: 'Dr. Ir. Sri Firmiaty, MP.',
+    pelatihan: 'Sistem Perkawinan Ternak Secara Buatan dan Alami ',
+    linkedin: 'http://www.linkedin.com/in/sri-firmiaty-09935540 ',
+  },
+  {
+    no: 6,
+    nama: 'Wiwi Nosanda',
+    pelatihan: 'Strategi Penanganan dan Pengolahan Produk Hortikultura',
+    linkedin: 'https://www.linkedin.com/in/wiwi-nosanda-62bb222a5',
+  },
+  {
+    no: 7,
+    nama: 'Devi Desnita, S.Pt',
+    pelatihan: 'Strategi Mendapatkan Sumber Daya Manusia Bagi Perusahaan',
+    linkedin: 'https://id.linkedin.com/in/devi-desnita-25929a241?trk=public_profile_samename-profile',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="Instruktur">
+    <Fragment slot="subtitle">
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+            <tr>
+              <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800"> No </th>
+              <th scope="col" class="px-6 py-3"> Nama </th>
+              <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800"> Pelatihan </th>
+              <th scope="col" class="px-6 py-3"> Linkedin </th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              instruktur.map(({ no, nama, pelatihan, linkedin }) => (
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                  <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800"> {no} </td>
+                  <td class="px-6 py-4"> {nama} </td>
+                  <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">{pelatihan}</td>
+                  <td class="px-6 py-4 text-center">
+                    <a href={linkedin} target="_blank">
+                      <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
+                    </a>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </Fragment>
+  </Hero></Layout
+>

@@ -2,10 +2,10 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Beranda',
-      href: getPermalink('/'),
-    },
+    // {
+    //   text: 'Beranda',
+    //   href: getPermalink('/'),
+    // },
     {
       text: 'Tentang',
       href: getPermalink('/about'),
@@ -13,6 +13,10 @@ export const headerData = {
     {
       text: 'Kelas',
       href: getPermalink('/courses'),
+    },
+    {
+      text: 'Instruktur',
+      href: getPermalink('/instruktur'),
     },
     {
       text: 'Info Prakerja',
