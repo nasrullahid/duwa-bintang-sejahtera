@@ -1,0 +1,18 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Bantuan',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline=""
+    title=""
+    content="<div class='relative w-full h-screen shadow-lg rounded-lg'><iframe class='w-full h-screen' src='https://docs.google.com/forms/d/e/1FAIpQLSeSr6P-uH8mPIiPhsEgouax_0sG65_q7DrrfE9ktGo1Nknc5Q/viewform?embedded=true'></iframe></div>"
+  />
+</Layout>
