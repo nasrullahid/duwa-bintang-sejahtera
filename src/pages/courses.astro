@@ -1,0 +1,94 @@
+---
+import Image from '~/components/common/Image.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Courses',
+};
+const {
+  title = 'Daftar Kursus dan Pelatihan',
+  subtitle = '',
+  tagline = 'Courses',
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+const data = [
+  {
+    title: 'Teknik Penyaringan dan Pengujian Kualitas Air Sederhana (Daring)',
+    price: 'Rp. 1.500.000',
+    link: 'https://skills.pintar.co/id/teknik-penyaringan-dan-pengujian-kualitas-air-sederhana-daring',
+    image: {
+      src: '~/assets/images/penyaringan-air.jpeg',
+      alt: 'Teknik Penyaringan dan Pengujian Kualitas Air Sederhana (Daring)',
+    },
+  },
+  {
+    title: 'Optimalisasi WhatsApp Bisnis Bagi Spesialis Pemasaran Digital (Daring)',
+    price: 'Rp. 1.500.000',
+    link: 'https://skills.pintar.co/id/optimalisasi-whatsapp-bisnis-bagi-spesialis-pemasaran-digital-daring',
+    image: {
+      src: '~/assets/images/wa-bisnis.jpeg',
+      alt: 'Optimalisasi WhatsApp Bisnis Bagi Spesialis Pemasaran Digital (Daring)',
+    },
+  },
+  {
+    title: 'Teknik Pemasaran Produk Menggunakan Optimalisasi Media Sosial (Daring)',
+    price: 'Rp. 1.500.000',
+    link: 'https://skills.pintar.co/id/teknik-pemasaran-produk-menggunakan-optimalisasi-media-sosial-daring',
+    image: {
+      src: '~/assets/images/medsos.jpeg',
+      alt: 'Teknik Pemasaran Produk Menggunakan Optimalisasi Media Sosial (Daring)',
+    },
+  },
+  {
+    title: 'Strategi Mendapatkan Sumber Daya Manusia Bagi Perusahaan',
+    price: 'Rp. 1.500.000',
+    link: 'https://skills.pintar.co/id/teknik-pemasaran-produk-menggunakan-optimalisasi-media-sosial-daring',
+    image: {
+      src: '~/assets/images/sdm.jpeg',
+      alt: 'Strategi Mendapatkan Sumber Daya Manusia Bagi Perusahaan',
+    },
+  },
+  {
+    title: 'Strategi pengelolaan produk investasi bagi analisis keuangan',
+    price: 'Rp. 1.500.000',
+    link: 'https://skills.pintar.co/id/strategi-pengelolaan-produk-investasi-bagi-analisis-keuangan',
+    image: {
+      src: '~/assets/images/investasi.jpeg',
+      alt: 'Strategi pengelolaan produk investasi bagi analisis keuangan',
+    },
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+    <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+    <div class="flex items-stretch justify-center">
+      <div class="grid grid-cols-1 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+        {
+          data.map(({ title, price, link, image = {} }) => (
+            <div class="col-span-3  mx-auto flex flex-col rounded-lg shadow-lg w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
+              <Image class="mx-auto w-full" widths={[640, 1280]} loading="eager" width={640} height={360} {...image} />
+              <div class="flex flex-col justify-center p-4">
+                <h3 class="font-bold my-2">{title}</h3>
+                <hr />
+                <p class="font-semibold my-2">{price}</p>
+                <a href={link} target="_blank" class="btn btn-primary p-2 mt-4" title="">
+                  Daftar Kelas
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </WidgetWrapper>
+</Layout>

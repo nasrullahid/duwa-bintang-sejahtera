@@ -1,0 +1,35 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: '~/assets/images/struktur.png',
+      alt: 'Struktur Organisasi',
+      width: 800,
+    }}
+  >
+    <Fragment slot="title"> CV. Duwa Bintang Sejahtera </Fragment>
+
+    <Fragment slot="subtitle">
+      CV. Duwa Bintang Sejahtera, yang didirikan oleh Bapak Sukarno S.Si pada 4 Oktober 2022, telah menjadi pelaku utama
+      dalam mendukung kemajuan sektor pangan di Indonesia. Dengan fokus bisnis yang mencakup pertanian, peternakan, dan
+      bahan kimia, perusahaan ini berkomitmen untuk memberikan solusi holistik bagi para pelaku usaha di dunia pangan.
+      Sejak awal berdiri, CV. Duwa Bintang Sejahtera telah menetapkan standar tinggi dalam menyediakan produk dan
+      layanan berkualitas tinggi untuk mendukung keberlanjutan dan efisiensi di sektor ini.
+    </Fragment>
+  </Hero>
+</Layout>

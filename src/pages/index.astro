@@ -1,0 +1,231 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Duwa Bintang Sejahtera',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero image={{ src: '~/assets/images/duwa-prakerja.jpeg', alt: 'Duwa Bintang Sejahtera' }}>
+    <Fragment slot="title"> LEMBAGA PELATIHAN DAN BISNIS </Fragment>
+    <Fragment slot="subtitle">
+      Menyulam Kreativitas, Mengasah Keunggulan. Melangkah Bersama Menuju Sukses Abadi dan Pertumbuhan Berkelanjutan
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline=""
+    title="Kelas Favorite"
+    items={[
+      {
+        title: 'konsep Dasar  Air',
+        description: '',
+      },
+      {
+        title: 'Karakteristik Air',
+        description: '',
+      },
+      {
+        title: 'Pengujian kualitas air ',
+        description: '',
+      },
+      {
+        title: 'Teknik penyaringan  air sederhana ',
+        description: '',
+      },
+      {
+        title: 'Kandungan kimia dalam Air terhadap kesehatan ',
+        description: '',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/penyaringan-air.jpeg',
+      alt: 'BMC',
+    }}
+    callToAction={{
+      href: 'https://skills.pintar.co/id/teknik-penyaringan-dan-pengujian-kualitas-air-sederhana-daring',
+      target: '_blank',
+      title: 'Teknik Penyaringan dan Pengujian Kualitas Air Sederhana (Daring)',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Teknik Penyaringan dan Pengujian Kualitas Air Sederhana (Daring)
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Konsep Dasar Mencari Pelanggan Potensial',
+        description: ``,
+      },
+      {
+        title: 'Konsep Dasar Sales & Handling Buyer',
+        description: '',
+      },
+      {
+        title: 'Pengenalan Aplikasi Whatsapp Bisnis ',
+        description: '',
+      },
+      {
+        title: 'Optimalisasi Whatsapp Bisnis Untuk Pemasaran Online ',
+        description: '',
+      },
+      {
+        title: 'Teknik Mempertahankan Pelanggan Via Whatsapp Bisnis',
+        description: '',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/wa-bisnis.jpeg',
+      alt: 'Blueprint Image',
+    }}
+    callToAction={{
+      href: 'https://skills.pintar.co/id/optimalisasi-whatsapp-bisnis-bagi-spesialis-pemasaran-digital-daring',
+      target: '_blank',
+      title: 'Optimalisasi WhatsApp Bisnis Bagi Spesialis Pemasaran Digital (Daring)',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Optimalisasi WhatsApp Bisnis Bagi Spesialis Pemasaran Digital (Daring)
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Konsep dasar pemasaran dan media sosia',
+      },
+      {
+        title: 'Personal branding dan brand awareness',
+      },
+      {
+        title: 'Bahan iklan pemasaran',
+      },
+      {
+        title: 'Membangun keakraban melalui konten media sosial',
+      },
+      {
+        title: 'Strategi pemasaran untuk mengoptimalkan fungsi media sosial',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/medsos.jpeg',
+      alt: 'Copywriting',
+    }}
+    callToAction={{
+      href: 'https://skills.pintar.co/id/menulis-iklan-media-sosial-menggunakan-copywriting-daring',
+      target: '_blank',
+      title: 'Teknik Pemasaran Produk Menggunakan Optimalisasi Media Sosial (Daring)',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Teknik Pemasaran Produk Menggunakan Optimalisasi Media Sosial (Daring)
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testiminial Widget ************** -->
+
+  <Testimonials
+    title="Testimoni Peserta"
+    testimonials={[
+      {
+        testimonial: `Saya sekarang memiliki pemahaman yang lebih baik tentang fitur-fitur kunci yang tersedia dan bagaimana cara menggunakan mereka secara efektif untuk memperkuat hubungan dengan pelanggan, memperluas jangkauan pemasaran, dan meningkatkan efisiensi operasional. Pelatihan ini telah membantu saya mengubah cara saya memandang WhatsApp dari sekadar platform pesan menjadi alat strategis yang dapat mendukung pertumbuhan bisnis saya. Terima kasih Tentamh WhatsApp Bisnis atas wawasan yang berharga ini!`,
+        name: 'Agung Firmansyah',
+        job: 'Mahasiswa Ekonomi Unhas',
+        image: {
+          src: 'https://i.pravatar.cc/150?u=agung@pravatar.com',
+          alt: 'Agung Firmansyah',
+        },
+      },
+      {
+        testimonial: `Setelah mengikuti pelatihan tentang strategi investasi saham, forex, dan emas bersama Tentamh, saya merasa lebih percaya diri dalam mengelola portofolio investasi saya. Sesi pelatihan memberikan wawasan yang mendalam tentang berbagai strategi yang dapat saya terapkan untuk mengoptimalkan keuntungan dan mengelola risiko. Saya sangat menghargai pendekatan praktis dan solusi yang ditawarkan oleh instruktur yang berpengalaman. Sekarang, saya memiliki pemahaman yang lebih baik tentang pasar keuangan dan dapat membuat keputusan investasi yang lebih cerdas. Terima kasih kepada Tentamh atas pelatihan yang sangat berharga ini!`,
+        name: 'Rachmat Hidayatullah',
+        job: 'Karyawan Swasta',
+        image: {
+          src: 'https://i.pravatar.cc/150?u=rachmat@pravatar.com',
+          alt: 'Rachmat Hidayatullah',
+        },
+      },
+      {
+        testimonial:
+          'Setelah mengikuti pelatihan tentang optimalisasi bisnis bersama Pelatihanya, saya merasa sangat terinspirasi dan siap untuk mengambil langkah-langkah konkret dalam meningkatkan kinerja bisnis saya. Sesi pelatihan memberikan wawasan yang mendalam tentang strategi-strategi terbaik untuk mengoptimalkan operasional, meningkatkan efisiensi, dan mengidentifikasi peluang-peluang baru untuk pertumbuhan. Saya sangat menghargai pendekatan praktis dan solusi yang ditawarkan oleh instruktur yang berpengalaman. Sekarang, saya memiliki pemahaman yang lebih baik tentang bagaimana mengelola bisnis saya dengan lebih efektif dan berdaya saing di pasar yang semakin kompetitif. Terima kasih Tentamh atas pelatihan yang luar biasa ini!',
+        name: 'Novita Anggi',
+        job: 'Karyawan swasta',
+        image: {
+          src: 'https://i.pravatar.cc/150?u=novita@pravatar.com',
+          alt: 'Novita Anggi',
+        },
+      },
+      {
+        testimonial:
+          'saya merasa lebih memahami pentingnya menjaga kualitas air untuk kesehatan dan lingkungan. Sesi pelatihan memberikan saya pemahaman yang mendalam tentang berbagai metode pengujian dan penyaringan yang dapat digunakan untuk memastikan air yang kami gunakan aman dan bersih. Saya sangat mengapresiasi informasi praktis dan solusi yang disampaikan oleh para instruktur yang berpengalaman. Sekarang, saya merasa lebih siap untuk melakukan pengujian kualitas air dan menerapkan langkah-langkah penyaringan yang diperlukan untuk memastikan kesehatan keluarga dan masyarakat. Terima kasih Tentamh atas pelatihan yang bermanfaat ini!',
+        name: 'Batullah SE',
+        job: 'Mahasiswa Kimia UIN',
+        image: {
+          src: 'https://i.pravatar.cc/150?u=justin@pravatar.com',
+          alt: 'Batullah SE',
+        },
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+  <BlogLatestPosts title="Find out more content in our Blog" information={``} />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kelas Prakerja',
+        href: 'https://skills.pintar.co/id/prakerja/learning-providers/e5a62e54-9273-4ab9-8b98-518394e6ab98?id=e5a62e54-9273-4ab9-8b98-518394e6ab98',
+        target: '_blank',
+        icon: 'tabler:link',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Duwa Bintang Sejahtera X Prakerja </Fragment>
+
+    <Fragment slot="subtitle"> Daftar kelas pelatihan prakerja di platform pintar </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { SITE } from '~/utils/config';
+import Image from '~/components/common/Image.astro';
+const image = { src: '~/assets/images/logo.png', alt: 'Duwa Bintang Sejahtera' };
+---
+
+<span
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center"
+>
+  <Image
+    class="mx-auto w-full"
+    widths={[400, 768, 1024, 2040]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+    loading="eager"
+    width={50}
+    height={50}
+    {...image}
+  />
+  {SITE?.name}
+</span>
