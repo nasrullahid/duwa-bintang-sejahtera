@@ -1,0 +1,28 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Image from '~/components/common/Image.astro';
+const image = { src: '~/assets/images/prakerja.png', alt: 'Duwa Bintang Sejahtera' };
+
+const metadata = {
+  title: 'Info Prakerja',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="subtitle">
+      <Image class="mx-auto w-full" loading="eager" width={500} height={160} {...image} />
+      Program Kartu Prakerja adalah program pengembangan kompetensi kerja dan kewirausahaan yang ditujukan untuk pencari
+      kerja, pekerja/buruh yang terkena pemutusan hubungan kerja, dan/atau pekerja/buruh yang membutuhkan peningkatan kompetensi,
+      termasuk pelaku usaha mikro dan kecil. Ingin tahu lebih lanjut mengenai program dan cara pendaftarannya?
+
+      <br />
+      kunjungi situs resminya di bawah ini:
+      <p><a href="https://www.prakerja.go.id/" class="btn btn-link" target="_blank">www.prakerja.go.id</a></p>
+    </Fragment>
+  </Hero>
+</Layout>

@@ -15,6 +15,10 @@ export const headerData = {
       href: getPermalink('/courses'),
     },
     {
+      text: 'Info Prakerja',
+      href: getPermalink('/prakerja'),
+    },
+    {
       text: 'Kontak',
       href: getPermalink('/contact'),
     },
